@@ -59,6 +59,6 @@ This project was a hands-on deep dive into WPF data binding, MVVM architecture, 
 
 🧑‍💻 Author
 
-Made with caffeine and code by Craig Joiner ☕💻
+Made by Craig Joiner ☕💻
 Feel free to fork or contribute!
 
