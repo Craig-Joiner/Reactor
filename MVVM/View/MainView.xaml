@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="Reactor.MVVM.View.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:Reactor"
+             xmlns:viewModel="clr-namespace:Reactor.MVVM.ViewModel"
+             mc:Ignorable="d"
+             Height="600"
+             Width="920">
+    <UserControl.DataContext>
+        <viewModel:MainViewModel/>
+    </UserControl.DataContext>
+
+    <Grid>
+        <!-- Grid Definitions -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!-- Title bar -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Title Bar -->
+        <Grid Grid.Row="0">
+            <TextBlock Text="Reactor"
+                FontSize="36"
+                FontWeight="Bold"
+                Foreground="#FF6B6B"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"/>
+        </Grid>
+
+        <!-- Left Side: Settings Panel -->
+        <StackPanel Grid.Row="1">
+            <RadioButton Content="Switch Theme"
+                       IsChecked="True"
+                       FontSize="20"
+                       Height="50"/>
+
+            <RadioButton Content="Exit"
+                        IsChecked="True"
+                        FontSize="20"
+                        Height="50"/>
+        </StackPanel>
+
+        <!-- Main Content -->
+        <ContentControl Grid.Row="1"
+                        Grid.Column="1"
+                        Margin="10"
+                        Content="{Binding CurrentView}"/>
+    </Grid>
+</UserControl>

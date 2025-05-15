@@ -1,0 +1,142 @@
+﻿<UserControl x:Class="Reactor.MVVM.View.UtilityView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Reactor.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" Width="722">
+
+    <StackPanel Orientation="Horizontal">
+        <!-- CPU + RAM vertical stack -->
+        <StackPanel>
+            <!-- CPU Usage Card -->
+            <Border Width="293"
+                Height="162"
+                Padding="16"
+                Background="#292F36"
+                BorderBrush="Black"
+                BorderThickness="1"
+                CornerRadius="12"
+                Margin="0,0,0,16">
+                <StackPanel>
+                    <TextBlock Text="CPU Usage"
+                           Foreground="#FF6B6B"
+                           FontWeight="Bold"
+                           FontSize="14"/>
+                    <TextBlock x:Name="CpuUsage"
+                           Text="{Binding CpuInfo.UsagePercentage, StringFormat=\{0:0\}%}"
+                           Foreground="#FFFFFF"
+                           FontSize="28"
+                           FontWeight="SemiBold"
+                           Margin="0,10,0,0"/>
+                    <ProgressBar Minimum="0" Maximum="100"
+                             Value="{Binding CpuInfo.UsagePercentage}"
+                             Height="8"
+                             Margin="0,8,0,0"
+                             Foreground="#FF6B6B"
+                             Background="#FFFFFF"
+                             BorderThickness="0"/>
+                </StackPanel>
+            </Border>
+
+            <!-- RAM Usage Card -->
+            <Border Width="293"
+                Height="162"
+                Padding="16"
+                Background="#292F36"
+                BorderBrush="Black"
+                BorderThickness="1"
+                CornerRadius="12">
+                <StackPanel>
+                    <TextBlock x:Name="RamUsage"
+           Text="RAM Usage"
+           Foreground="#FF6B6B"
+           FontWeight="Bold"
+           FontSize="14"/>
+                    <TextBlock Text="{Binding RamInfo.UsagePercentage, StringFormat={}{0:0}%}"
+           Foreground="#FFFFFF"
+           FontSize="28"
+           FontWeight="SemiBold"
+           Margin="0,10,0,0"/>
+                    <ProgressBar Minimum="0" Maximum="100"
+             Value="{Binding RamInfo.UsagePercentage, Mode=OneWay}"
+             Height="8"
+             Margin="0,8,0,0"
+             Foreground="#FF6B6B"
+             Background="#FFFFFF"
+             BorderThickness="0">
+                        <ProgressBar.ToolTip>
+                            <ToolTip>
+                                <TextBlock Text="{Binding RamInfo, StringFormat=Used: {0.UsedMemory:0} MB / Total: {0.TotalMemory:0} MB}" />
+                            </ToolTip>
+                        </ProgressBar.ToolTip>
+                    </ProgressBar>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+
+        <!-- GPU + Storage vertical stack -->
+        <StackPanel Margin="16,0,0,0">
+            <!-- GPU Usage Card -->
+            <Border Width="293"
+                Height="162"
+                Padding="16"
+                Background="#292F36"
+                BorderBrush="Black"
+                BorderThickness="1"
+                CornerRadius="12"
+                Margin="0,0,0,16">
+                <StackPanel>
+                    <TextBlock Text="GPU Usage"
+                           Foreground="#FF6B6B"
+                           FontWeight="Bold"
+                           FontSize="14"/>
+                    <TextBlock x:Name="GpuUsage"
+                           Text="{Binding GpuInfo.UsagePercentage, StringFormat=\{0:0\}%}"
+                           Foreground="#FFFFFF"
+                           FontSize="28"
+                           FontWeight="SemiBold"
+                           Margin="0,10,0,0"/>
+                    <ProgressBar Minimum="0" Maximum="100"
+                             Value="{Binding GpuInfo.UsagePercentage}"
+                             Height="8"
+                             Margin="0,8,0,0"
+                             Foreground="#FF6B6B"
+                             Background="#FFFFFF"
+                             BorderThickness="0"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Storage Usage Card -->
+            <Border Width="293"
+                Height="162"
+                Padding="16"
+                Background="#292F36"
+                BorderBrush="Black"
+                BorderThickness="1"
+                CornerRadius="12">
+                <StackPanel>
+                    <TextBlock Text="Storage Usage"
+                           Foreground="#FF6B6B"
+                           FontWeight="Bold"
+                           FontSize="14"/>
+                    <TextBlock x:Name="StorageUsage"
+                           Text="{Binding StorageInfo.UsagePercentage, Mode=OneWay, StringFormat={}{0:0}%}"
+                           Foreground="#FFFFFF"
+                           FontSize="28"
+                           FontWeight="SemiBold"
+                           Margin="0,10,0,0"/>
+                    <ProgressBar Minimum="0" Maximum="100"
+                             Value="{Binding StorageInfo.UsagePercentage, Mode=OneWay}"
+                             Height="8"
+                             Margin="0,8,0,0"
+                             Foreground="#FF6B6B"
+                             Background="#FFFFFF"
+                             BorderThickness="0"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </StackPanel>
+</UserControl>
+    
