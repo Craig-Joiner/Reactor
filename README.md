@@ -17,6 +17,7 @@ Reactor is a lightweight system monitoring app for Windows, inspired by the eleg
 💡 Inspiration
 
 I’ve always liked the aesthetic and utility of NZXT CAM, but wanted something custom and more lightweight. Reactor was born from that idea—a project focused on simplicity, clarity, and performance.
+
 🛠️ Tech Stack
 
     .NET (WPF)
@@ -29,8 +30,10 @@ I’ve always liked the aesthetic and utility of NZXT CAM, but wanted something 
 
     INotifyPropertyChanged for real-time UI binding# Reactor
 
-    ![image](https://github.com/user-attachments/assets/bd1c080b-82e0-4a81-8a52-90c3206e26f8)
+    ![Screenshot 2025-05-15 183720](https://github.com/user-attachments/assets/74975700-bada-4cc7-888e-8e0b56c187dc)
 
+
+    
     ⚙️ Installation
 
     Clone the repository
@@ -41,6 +44,7 @@ I’ve always liked the aesthetic and utility of NZXT CAM, but wanted something 
     Build and run the solution
 
 No installer needed—Reactor runs directly as a standalone WPF app.
+
 📌 TODO / Roadmap
 
 GPU Usage support
