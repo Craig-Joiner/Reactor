@@ -30,9 +30,7 @@ I’ve always liked the aesthetic and utility of NZXT CAM, but wanted something 
 
     INotifyPropertyChanged for real-time UI binding# Reactor
 
-    ![Reactor UI](Assets/Screenshot.png)
-
-
+    
     
     ⚙️ Installation
 
