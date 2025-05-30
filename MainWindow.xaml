@@ -9,6 +9,13 @@
         WindowStyle="None"
         Background="#292F36">
     <Grid>
+        <!-- Draggable Area -->
+        <Border Background="Transparent"
+                Height="40"
+                VerticalAlignment="Top"
+                MouseDown="DraggableArea_MouseDown">
+        </Border>
+        
         <view:MainView/>
     </Grid>
 </Window>

@@ -40,11 +40,13 @@
             <RadioButton Content="Switch Theme"
                        IsChecked="True"
                        FontSize="20"
+                       Foreground="#D5C5C8"
                        Height="50"/>
 
             <RadioButton Content="Exit"
                         IsChecked="True"
                         FontSize="20"
+                        Foreground="#D5C5C8"
                         Height="50"/>
         </StackPanel>
 

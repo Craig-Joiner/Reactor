@@ -54,15 +54,9 @@ namespace Reactor.MVVM.ViewModel
 
         public UtilityViewModel()
         {
-            // Initialize with default or fetched values
             CpuInfo = new CpuInfo();
             RamInfo = new RamInfo();
             StorageInfo = new StorageInfo();
-
-            // TODO: Start your monitoring or loading logic here
-            // e.g., LoadStorageData(), StartCpuMonitor(), etc.
         }
-
-        // Optional: Methods to update your info dynamically
     }
 }
