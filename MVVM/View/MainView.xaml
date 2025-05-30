@@ -13,44 +13,57 @@
     </UserControl.DataContext>
 
     <Grid>
-        <!-- Grid Definitions -->
+        <!-- Main Grid Layout -->
         <Grid.RowDefinitions>
             <RowDefinition Height="75"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-
-        <!-- Title bar -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <!-- Title Bar -->
-        <Grid Grid.Row="0">
+        <!-- Title Bar (Full Width) -->
+        <Grid Grid.Row="0" Grid.ColumnSpan="2">
             <TextBlock Text="Reactor"
-                FontSize="36"
-                FontWeight="Bold"
-                Foreground="#FF6B6B"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center"/>
+                       FontSize="36"
+                       FontWeight="Bold"
+                       Foreground="#FF6B6B"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Left" RenderTransformOrigin="-1.142,0.42" Margin="10,10,0,0"/>
         </Grid>
 
-        <!-- Left Side: Settings Panel -->
-        <StackPanel Grid.Row="1">
-            <RadioButton Content="Switch Theme"
-                       IsChecked="True"
-                       FontSize="20"
-                       Foreground="#D5C5C8"
-                       Height="50"/>
+        <!-- Sidebar Left -->
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
-            <RadioButton Content="Exit"
-                        IsChecked="True"
-                        FontSize="20"
-                        Foreground="#D5C5C8"
-                        Height="50"/>
-        </StackPanel>
+            <!-- Theme Switcher -->
+            <StackPanel Grid.Row="0">
+                <RadioButton Content="Switch Theme"
+                             FontSize="20"
+                             Foreground="#D5C5C8"
+                             Height="50"/>
+            </StackPanel>
 
-        <!-- Main Content -->
+            <!-- Spacer -->
+            <Grid Grid.Row="1"/>
+
+            <!-- Exit Button at Bottom -->
+            <Button Grid.Row="1"
+                    Content="Exit"
+                    FontSize="20"
+                    Foreground="#D5C5C8"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Height="50"
+                    Click="ExitButton_Click" RenderTransformOrigin="0.486,0.127" Margin="0,400,0,25" Grid.RowSpan="2"/>
+        </Grid>
+
+        <!-- Main Content Area -->
         <ContentControl Grid.Row="1"
                         Grid.Column="1"
                         Margin="10"
